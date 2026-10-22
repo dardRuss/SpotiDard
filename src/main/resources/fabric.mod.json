@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "spotifyplayer",
+	"version": "${version}",
+	"name": "SpotyDard",
+	"description": "SpotyDard Now Playing HUD: album cover, track name, artists, progress bar and playback controls.",
+	"authors": [
+		"dardRuss"
+	],
+	"contact": {},
+	"license": "MIT",
+	"icon": "assets/spotifyplayer/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.spotifyhud.SpotifyPlayerClient"
+		],
+		"modmenu": [
+			"com.spotifyhud.ModMenuApiImpl"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.0",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"modmenu": "*"
+	}
+}

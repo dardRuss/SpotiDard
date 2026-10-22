@@ -1,38 +1,40 @@
-# SpotyDard (Minecraft HUD-мод)
+# SpotyDard (Minecraft HUD mod)
 
-Fabric-мод для Minecraft 26.3 (Fabric Loader 0.20.1): HUD-виджет с текущим треком Spotify — обложка, название, исполнители, полоса прогресса и время.
+A Fabric mod for Minecraft 26.3 (Fabric Loader 0.20.1): a HUD widget showing the current Spotify track — album art, title, artists, progress bar and time.
 
-Требуется **Spotify Premium**.
+**Spotify Premium** is required.
 
-## Сборка
+## Building
 ```powershell
-$env:JAVA_HOME='C:\Users\suvor\AppData\Local\Temp\opencode\jdk25\jdk-25.0.4.1+1'
+$env:JAVA_HOME='<path to JDK 25>'
 .\gradlew.bat build
 ```
-Готовый jar: `build\libs\spotifyplayer-1.0.0.jar`.
+The resulting jar: `build\libs\spotifyplayer-1.0.0.jar`.
 
-## Установка
-1. Установите Fabric Loader 0.20.1 для Minecraft 26.3.
-2. Положите `spotifyplayer-1.0.0.jar` и **Fabric API** (`fabric-api-0.164.0+26.3.jar`) в папку `.minecraft\mods`.
-3. (Опционально) ModMenu 21.0.0 для входа в настройки через список модов.
+## Installation
+1. Install Fabric Loader 0.20.1 for Minecraft 26.3.
+2. Put `spotifyplayer-1.0.0.jar` and **Fabric API** (`fabric-api-0.164.0+26.3.jar`) into the `.minecraft\mods` folder.
+3. (Optional) ModMenu 21.0.0 to access the settings from the mod list.
 
-## Настройка Spotify API
-1. Зайдите на https://developer.spotify.com/dashboard → Create app.
-2. Redirect URI: `http://127.0.0.1:5500/callback` (порт можно любой, задайте такой же в настройках мода).
-3. API: Web API. Скопируйте **Client ID**.
-4. В игре откройте настройки мода (клавиша U / ModMenu — кнопка «Настройки»), вставьте Client ID, нажмите **Войти в Spotify** — откроется браузер, подтвердите вход.
+## Spotify API setup
+1. Go to https://developer.spotify.com/dashboard → Create app.
+2. Redirect URI: `http://127.0.0.1:5500/callback` (the port can be any, use the same one in the mod settings).
+3. API: Web API. Copy the **Client ID**.
+4. In game, open the mod settings (U key / ModMenu — "Settings" button), paste the Client ID, click **Log in** — a browser will open, confirm the sign-in.
 
-Настройки и токены хранятся в `.minecraft\config\spotifyplayer.json`.
+Settings and tokens are stored in `.minecraft\config\spotifyplayer.json`.
 
-## Управление (по умолчанию, настраивается)
-| Действие | Клавиша |
+## Controls (default, configurable)
+| Action | Key |
 |---|---|
-| Пауза/продолжить | P |
-| Следующий трек | N |
-| Предыдущий трек | B |
-| Шафл | I |
-| Повтор | O |
-| Громкость +/− | ↑ / ↓ |
-| Настройки | U |
+| Pause / play | P |
+| Next track | N |
+| Previous track | B |
+| Shuffle | I |
+| Repeat | O |
+| Volume +/− | ↑ / ↓ |
+| Settings | U |
 
-Позиция HUD: ниже/выше хотбара, слева/по центру/справа, рамка вкл/выкл, цветовая схема.
+HUD position: below/above the hotbar, left/center/right, frame on/off, color scheme.
+
+The mod supports English and Russian languages (selected automatically based on the game language).

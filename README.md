@@ -38,3 +38,5 @@ Settings and tokens are stored in `.minecraft\config\spotifyplayer.json`.
 HUD position: below/above the hotbar, left/center/right, frame on/off, color scheme.
 
 The mod supports English and Russian languages (selected automatically based on the game language).
+
+The mod was created by AI. You can download the mod and modify it to suit your needs.
